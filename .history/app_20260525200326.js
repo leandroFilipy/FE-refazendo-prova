@@ -1,0 +1,33 @@
+async function carregar6() {
+    
+    const  container = document.querySelector("#destaques-showcase")
+    container.innerHTML = ""
+
+    try{
+
+        const resposta = await fetch ("https://api-restaurante-5iqb.onrender.com/api/produtos")
+        const data = await resposta.json()
+
+        const destacados = data.filter(produto => produto.destacados === true)
+
+        destacados.forEach(produto => {
+            
+            container.innerHTML
+        });
+
+        /*for(let i =0; i<6; i++){
+
+                container.innerHTML += `
+                
+                `
+            }
+        */
+       
+
+        
+
+    }catch(error){
+        console.log("erro foi: " + error)
+    }
+
+}

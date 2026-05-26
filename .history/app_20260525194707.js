@@ -1,0 +1,4 @@
+async function carregar6() {
+    
+    
+}
